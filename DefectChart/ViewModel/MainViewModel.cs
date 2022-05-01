@@ -93,14 +93,15 @@ namespace DefectChart.ViewModel
         private void RefreshChart()
         {
             ObservableCollection<BoxItem> boxes = new ObservableCollection<BoxItem>();
+            int index = 0;
             foreach (List<double> finalbox in Result.Final_boxes)
             {
-                int index = 0;
                 double ymin = finalbox[0];
                 double xmin = finalbox[1];
                 double ymax = finalbox[2];
                 double xmax = finalbox[3];
                 boxes.Add(CoordTansfer.Transformer(xmin, ymin, xmax, ymax, Result.Final_class_ids[index]));
+                index += 1;
             }
             Console.WriteLine(boxes.Count);
             //处理输入的数据

@@ -27,7 +27,7 @@
                                                Canvas.Left="{Binding Left, Converter={StaticResource WideConverter}, ConverterParameter={x:Static local:Chart.Board_Width}}"
                                                Canvas.Top="{Binding Top, Converter={StaticResource HeightConverter}, ConverterParameter={x:Static local:Chart.Board_Height}}"
                                                Fill="{Binding ClsColor}"
-                                               Opacity="0.8"></Rectangle>
+                                               ></Rectangle>
                                 </Canvas>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
